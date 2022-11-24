@@ -49,8 +49,8 @@ terraform state mv module.dynamodb_table.aws_dynamodb_table.this module.dynamodb
 |read_capacity  | O número de unidades de leitura para esta tabela. Se o billing_mode for PROVISIONED, este campo deve ser maior que 0                                                                             | `number`   |  null |❌
 |point_in_time_recovery_enabled  | Se deve habilitar a recuperação pontual                  | `bool`     | false |❌
 |ttl_enabled                     | Indica se ttl está ativado                               | `bool`     | false |❌
-|ttl_attribute_name              | O nome do atributo da tabela para armazenar o timestamp TTL em |`string`    |
-|global_secondary_indexes        | Descreva um GSI para a tabela; sujeito aos limites normais do número de GSIs, atributos projetados, etc.                                                                  | any        |❌
+|ttl_attribute_name              | O nome do atributo da tabela para armazenar o timestamp TTL em |`string`    |❌
+|global_secondary_indexes        | Descreva um GSI para a tabela; sujeito aos limites normais do número de GSIs, atributos projetados, etc.                                                                  | any        ||❌
 |local_secondary_indexes         | Descreva um LSI na tabela; eles só podem ser alocados na criação, portanto, você não pode alterar essa definição depois de criar o recurso.                                      | any        | []  |❌
 |replica_regions                 |Nomes de região para criar réplicas para uma tabela global do DynamoDB.|any  | []|    
 |stream_enabled  |Indica se os Streams devem ser habilitados (true) ou desabilitados (false)| `bool`     |false|❌
