@@ -21,18 +21,18 @@
 |server_side_encryption_enabled|Habilitar ou não a criptografia em repouso usando uma chave mestra do cliente KMS gerenciada pela AWS (CMK)|bool|false|
 |server_side_encryption_kms_key_arn|O ARN da CMK que deve ser usado para a criptografia do AWS KMS. Esse atributo só deve ser especificado se a chave for diferente da CMK padrão do DynamoDB, alias/aws/dynamodb.|string|null|
 |tags||Um mapa de tags para adicionar a todos os recursos|map(string)|{}|
-|timeouts|Tempo limite de gerenciamento de recursos do Terraform atualizado|map(string)|{
+|timeouts|Tempo limite de gerenciamento de recursos do Terraform atualizado|`map(string)`|`{
     create = 10m
     update = 60m
     delete = 10m
-  }|
+}`|
 |autoscaling_enabled|Se deve ou não ativar o escalonamento automático. Veja a nota em README sobre esta configuração|bool|false|
-|autoscaling_defaults|Um mapa das configurações de dimensionamento automático padrão|map(string)|{
+|autoscaling_defaults|Um mapa das configurações de dimensionamento automático padrão|map(string)|`{
     scale_in_cooldown  = 0
     scale_out_cooldown = 0
     target_value       = 70
-  }|
-|autoscaling_read|Um mapa de configurações de escalonamento automático de leitura. `max_capacity` é a única chave necessária. Veja o exemplo em exemplos/escalonamento automático|map(string)|{}|
-|autoscaling_write|Um mapa das configurações de escalonamento automático de gravação. `max_capacity` é a única chave necessária. Veja o exemplo em exemplos/escalonamento automático|map(string)|{}|
-|autoscaling_indexes|Um mapa de configurações de escalonamento automático de índice. Veja o exemplo em exemplos/escalonamento automático|map(map(string))|{}|
+  }`|
+|autoscaling_read|Um mapa de configurações de escalonamento automático de leitura. `max_capacity` é a única chave necessária. Veja o exemplo em exemplos/escalonamento automático|map(string)|`{}`|
+|autoscaling_write|Um mapa das configurações de escalonamento automático de gravação. `max_capacity` é a única chave necessária. Veja o exemplo em exemplos/escalonamento automático|map(string)|`{}`|
+|autoscaling_indexes|Um mapa de configurações de escalonamento automático de índice. Veja o exemplo em exemplos/escalonamento automático|`map(map(string))`|`{}`|
 |table_class|A classe de armazenamento da tabela. Os valores válidos são STANDARD e STANDARD_INFREQUENT_ACCESS|string|null|
