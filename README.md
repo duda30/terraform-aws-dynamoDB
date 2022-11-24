@@ -1,5 +1,7 @@
 ## Inputs
 
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-------:|:--------:|
 |create_table    |   Controla se a tabela do DynamoDB e os recursos associados são criados   |   type=bool   |   default     = true|
 |name    |   Nome da tabela do DynamoDB  |   type=string     |   default     = null|
 |attributes  |   Lista de definições de atributos aninhados. Necessário apenas para os atributos hash_key e range_key. Cada atributo tem duas propriedades: nome - (Obrigatório) O nome do atributo, tipo - (Obrigatório) Tipo de atributo, que deve ser um tipo escalar: S, N ou B para (S)tring, (N)umber ou (B)inary data     |   default     = []|
