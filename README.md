@@ -52,7 +52,7 @@ terraform state mv module.dynamodb_table.aws_dynamodb_table.this module.dynamodb
 |ttl_attribute_name              | O nome do atributo da tabela para armazenar o timestamp TTL em |`string`    ||❌
 |global_secondary_indexes        | Descreva um GSI para a tabela; sujeito aos limites normais do número de GSIs, atributos projetados, etc.                                                                  | any        |`[]`|❌
 |local_secondary_indexes         | Descreva um LSI na tabela; eles só podem ser alocados na criação, portanto, você não pode alterar essa definição depois de criar o recurso.                                      | any        | `[]`  |❌
-|replica_regions                 |Nomes de região para criar réplicas para uma tabela global do DynamoDB.|any  | `[]`|    
+|replica_regions                 |Nomes de região para criar réplicas para uma tabela global do DynamoDB.|any  | `[]`|   ❌
 |stream_enabled  |Indica se os Streams devem ser habilitados (true) ou desabilitados (false)| `bool`     |false|❌
 |stream_view_type                    | Quando um item na tabela é modificado, StreamViewType determina quais informações são gravadas no fluxo da tabela. Os valores válidos são KEYS_ONLY, NEW_IMAGE, OLD_IMAGE, NEW_AND_OLD_IMAGES.                                                                         | `string`    | null |❌
 |server_side_encryption_enabled      | Habilitar ou não a criptografia em repouso usando uma chave mestra do cliente KMS gerenciada pela AWS (CMK)                                                               | `bool`      | false|❌
