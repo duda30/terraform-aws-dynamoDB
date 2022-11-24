@@ -6,7 +6,7 @@ Módulo Terraform para criar uma tabela DynamoDB.
 
 ```hcl
 module "dynamodb_table" {
-  source   = "terraform-aws-modules/dynamodb-table/aws"
+  source   = "github.com/duda30/terraform-aws-dynamoDB"
 
   name     = "my-table"
   hash_key = "id"
