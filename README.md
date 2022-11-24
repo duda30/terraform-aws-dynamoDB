@@ -65,3 +65,13 @@ terraform state mv module.dynamodb_table.aws_dynamodb_table.this module.dynamodb
 |autoscaling_write          |Um mapa das configurações de escalonamento automático de gravação. `max_capacity` é a única chave necessária. Veja o exemplo em exemplos/escalonamento automático                 |`map(string)`     |`{}`|❌
 |autoscaling_indexes        |Um mapa de configurações de escalonamento automático de índice. Veja o exemplo em exemplos/escalonamento automático                                                                    |`map(map(string))`|`{}`|❌
 |table_class                |A classe de armazenamento da tabela. Os valores válidos são STANDARD e STANDARD_INFREQUENT_ACCESS                                                                  |`string`          |null|❌
+
+
+## Outputs 
+
+| Name | Description |
+|------|-------------|
+|dynamodb_table_arn| ARN da tabela do DynamoDB |
+|dynamodb_table_id | ID da tabela do DynamoDB  |
+|dynamodb_table_stream_arn   | O ARN do Table Stream. Disponível apenas quando var.stream_enabled é verdadeiro |
+|dynamodb_table_stream_label | Um carimbo de data/hora, no formato ISO 8601 do Table Stream. Disponível apenas quando var.stream_enabled é verdadeiro |
